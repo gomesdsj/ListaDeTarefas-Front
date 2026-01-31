@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+     
+    
+
+<body>
+
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Perfil.html">Perfil</a></li>
+                <li><a href="Configurações.html">Configurações</a></li>
+                <li><a href="AdicionarTarefa.html">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1>Bem-vindo à página Home</h1>
+    </div>
+
+    <div class="conteudoTarefas">
+        <div class="tarefaContainer" id="botaoContainer">
+        </div>
+    </div>
+
+    <div class="AbaOculta" style="display: none;">
+        <button id="fecharAba">X</button>
+        <h2>Detalhes da Tarefa</h2>
+        <p id="detalhesTarefa">Aqui estarão os detalhes da tarefa selecionada.</p>
+    </div>
+
+    <div id="recebidas">
+        <h2>Tarefas Recebidas:</h2>
+            <div class="TarefaRecebida">Tarefa 1: Olá, tudo bem?</div>
+            <div class="TarefaRecebida">Tarefa 2: Não se esqueça da reunião amanhã.</div>
+            <div class="TarefaRecebida">Tarefa 3: Parabéns pelo seu aniversário!</div>
+    </div>
+
+    <div id="enviadas">
+        <h2>Tarefas Enviadas:</h2>
+            <div class="TarefaEnviada">Tarefa 1: Finalizar relatório mensal</div>
+            <div class="TarefaEnviada">Tarefa 2: Agendar reunião com equipe</div>
+            <div class="TarefaEnviada">Tarefa 3: Enviar documentos ao cliente</div>
+    </div>
+
+    <div id="em_andamento">
+        <h2>Em Andamento</h2>
+            <div class="TarefaEmAndamento">tarefa 1: João Silva</div>
+            <div class="TarefaEmAndamento">tarefa 2: Maria Oliveira</div>
+            <div class="TarefaEmAndamento">tarefa 3: Pedro Santos</div>
+   </div>
+
+    <script src="js/script.js"></script>
+     
+
+</body>
+</html>
