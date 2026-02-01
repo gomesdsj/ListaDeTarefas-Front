@@ -138,6 +138,180 @@ button:active {
     transform: translateX(5px);
 }
 
+/* Botões de Ação - Tarefas */
+#listaTarefasEnviadas .TarefaEnviada,
+#listaTarefasAndamento .TarefaEmAndamento,
+#listaTarefasRecebidas .TarefaRecebida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#listaTarefasEnviadas .TarefaEnviada span,
+#listaTarefasAndamento .TarefaEmAndamento span,
+#listaTarefasRecebidas .TarefaRecebida span {
+    flex: 1;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 5px;
+}
+
+.botoes-acao button {
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.botoes-acao button:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-deletar {
+    background-color: #ffcccc !important;
+}
+
+.btn-deletar:hover {
+    background-color: #ff9999 !important;
+}
+
+.btn-editar,
+.btn-atualizar {
+    background-color: #ccffcc !important;
+}
+
+.btn-editar:hover,
+.btn-atualizar:hover {
+    background-color: #99ff99 !important;
+}
+
+/* AbaOculta - Modal */
+.AbaOculta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 85%;
+    animation: slideIn 0.3s ease;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e74c3c;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-fechar:hover {
+    background-color: #c0392b;
+}
+
+.btn-fechar:active {
+    transform: scale(0.95);
+}
+
+.modal-conteudo h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.modal-conteudo p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.modal-input-area {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+#respostaTarefa {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+#respostaTarefa:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.btn-enviar {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #2980b9;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header nav ul {

@@ -14,16 +14,17 @@ function inicializarBotaoIncluir() {
 
 
 function handleBotaoIncluir() {
-    alert('Tarefa incluída com sucesso!');
+    const abaOculta = document.querySelector('.AbaOculta');
+    abaOculta.style.display = 'block';
     
 }
 
-
-function exibirSaudacao() {
-    alert("Bom dia! Antes de começar, lembre-se de verificar suas tarefas.");
+function fecharAba() {
+    const abaOculta = document.querySelector('.AbaOculta');
+    abaOculta.style.display = 'none';
 }
 
-
+document.getElementById('fecharAba').addEventListener('click', fecharAba);
 document.addEventListener('DOMContentLoaded', function() {
     inicializarBotaoIncluir();
     exibirSaudacao();

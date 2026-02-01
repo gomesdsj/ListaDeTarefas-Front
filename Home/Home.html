@@ -32,32 +32,80 @@
         </div>
     </div>
 
-    <div class="AbaOculta" style="display: none;">
-        <button id="fecharAba">X</button>
-        <h2>Detalhes da Tarefa</h2>
-        <p id="detalhesTarefa">Aqui estarão os detalhes da tarefa selecionada.</p>
+    
+    <div class="AbaOculta" style="display: none;" id="modalTarefa">
+        <div class="modal-conteudo">
+            <button id="fecharAba" class="btn-fechar">X</button>
+            <h2>Detalhes da Tarefa</h2>
+            <p id="detalhesTarefa">Aqui estarão os detalhes da tarefa selecionada.</p>
+            <div class="modal-input-area">
+                <input type="text" id="respostaTarefa" placeholder="Digite sua resposta...">
+                <button id="enviarTarefa" class="btn-enviar">Enviar</button>
+            </div>
+        </div>
     </div>
 
+    
     <div id="recebidas">
         <h2>Tarefas Recebidas:</h2>
-            <div class="TarefaRecebida">Tarefa 1: Olá, tudo bem?</div>
-            <div class="TarefaRecebida">Tarefa 2: Não se esqueça da reunião amanhã.</div>
-            <div class="TarefaRecebida">Tarefa 3: Parabéns pelo seu aniversário!</div>
+        <div id="listaTarefasRecebidas"></div>
     </div>
 
+    
     <div id="enviadas">
         <h2>Tarefas Enviadas:</h2>
-            <div class="TarefaEnviada">Tarefa 1: Finalizar relatório mensal</div>
-            <div class="TarefaEnviada">Tarefa 2: Agendar reunião com equipe</div>
-            <div class="TarefaEnviada">Tarefa 3: Enviar documentos ao cliente</div>
+        <div id="listaTarefasEnviadas">
+            <div class="TarefaEnviada" data-id="1">
+                <span>Tarefa 1: Finalizar relatório mensal</span>
+                <div class="botoes-acao">
+                    <button class="btn-editar" data-id="1">Editar</button>
+                    <button class="btn-deletar" data-id="1">Deletar</button>
+                </div>
+            </div>
+            <div class="TarefaEnviada" data-id="2">
+                <span>Tarefa 2: Agendar reunião com equipe</span>
+                <div class="botoes-acao">
+                    <button class="btn-editar" data-id="2">Editar</button>
+                    <button class="btn-deletar" data-id="2">Deletar</button>
+                </div>
+            </div>
+            <div class="TarefaEnviada" data-id="3">
+                <span>Tarefa 3: Enviar documentos ao cliente</span>
+                <div class="botoes-acao">
+                    <button class="btn-editar" data-id="3">Editar</button>
+                    <button class="btn-deletar" data-id="3">Deletar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+    
     <div id="em_andamento">
         <h2>Em Andamento</h2>
-            <div class="TarefaEmAndamento">tarefa 1: João Silva</div>
-            <div class="TarefaEmAndamento">tarefa 2: Maria Oliveira</div>
-            <div class="TarefaEmAndamento">tarefa 3: Pedro Santos</div>
-   </div>
+        <div id="listaTarefasAndamento">
+            <div class="TarefaEmAndamento" data-id="1">
+                <span>tarefa 1: João Silva</span>
+                <div class="botoes-acao">
+                    <button class="btn-atualizar" data-id="1">Atualizar</button>
+                    <button class="btn-deletar" data-id="1">Deletar</button>
+                </div>
+            </div>
+            <div class="TarefaEmAndamento" data-id="2">
+                <span>tarefa 2: Maria Oliveira</span>
+                <div class="botoes-acao">
+                    <button class="btn-atualizar" data-id="2">Atualizar</button>
+                    <button class="btn-deletar" data-id="2">Deletar</button>
+                </div>
+            </div>
+            <div class="TarefaEmAndamento" data-id="3">
+                <span>tarefa 3: Pedro Santos</span>
+                <div class="botoes-acao">
+                    <button class="btn-atualizar" data-id="3">Atualizar</button>
+                    <button class="btn-deletar" data-id="3">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
      
