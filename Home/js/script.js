@@ -24,8 +24,10 @@ function fecharAba() {
     abaOculta.style.display = 'none';
 }
 
-document.getElementById('fecharAba').addEventListener('click', fecharAba);
 document.addEventListener('DOMContentLoaded', function() {
     inicializarBotaoIncluir();
-    exibirSaudacao();
+    const fecharAbaBtn = document.getElementById('fecharAba');
+    if (fecharAbaBtn) {
+        fecharAbaBtn.addEventListener('click', fecharAba);
+    }
 });

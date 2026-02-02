@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/funcoes.js"></script>
 </head>
      
     
@@ -18,7 +19,7 @@
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Perfil.html">Perfil</a></li>
                 <li><a href="Configurações.html">Configurações</a></li>
-                <li><a href="AdicionarTarefa.html">Ajuda</a></li>
+                <li><a href="AdicionarTarefa.html">Adicionar Tarefa</a></li>
             </ul>
         </nav>
     </header>
@@ -37,10 +38,9 @@
         <div class="modal-conteudo">
             <button id="fecharAba" class="btn-fechar">X</button>
             <h2>Detalhes da Tarefa</h2>
-            <p id="detalhesTarefa">Aqui estarão os detalhes da tarefa selecionada.</p>
             <div class="modal-input-area">
                 <input type="text" id="respostaTarefa" placeholder="Digite sua resposta...">
-                <button id="enviarTarefa" class="btn-enviar">Enviar</button>
+                <button onclick="salvarTarefa()" id="enviarTarefa" class="btn-enviar">Enviar</button>
             </div>
         </div>
     </div>
@@ -62,21 +62,7 @@
                     <button class="btn-deletar" data-id="1">Deletar</button>
                 </div>
             </div>
-            <div class="TarefaEnviada" data-id="2">
-                <span>Tarefa 2: Agendar reunião com equipe</span>
-                <div class="botoes-acao">
-                    <button class="btn-editar" data-id="2">Editar</button>
-                    <button class="btn-deletar" data-id="2">Deletar</button>
-                </div>
-            </div>
-            <div class="TarefaEnviada" data-id="3">
-                <span>Tarefa 3: Enviar documentos ao cliente</span>
-                <div class="botoes-acao">
-                    <button class="btn-editar" data-id="3">Editar</button>
-                    <button class="btn-deletar" data-id="3">Deletar</button>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     
@@ -88,20 +74,6 @@
                 <div class="botoes-acao">
                     <button class="btn-atualizar" data-id="1">Atualizar</button>
                     <button class="btn-deletar" data-id="1">Deletar</button>
-                </div>
-            </div>
-            <div class="TarefaEmAndamento" data-id="2">
-                <span>tarefa 2: Maria Oliveira</span>
-                <div class="botoes-acao">
-                    <button class="btn-atualizar" data-id="2">Atualizar</button>
-                    <button class="btn-deletar" data-id="2">Deletar</button>
-                </div>
-            </div>
-            <div class="TarefaEmAndamento" data-id="3">
-                <span>tarefa 3: Pedro Santos</span>
-                <div class="botoes-acao">
-                    <button class="btn-atualizar" data-id="3">Atualizar</button>
-                    <button class="btn-deletar" data-id="3">Deletar</button>
                 </div>
             </div>
         </div>
