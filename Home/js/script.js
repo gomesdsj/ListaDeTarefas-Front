@@ -1,63 +1,57 @@
 
-// ===================================
-// INICIALIZAÇÃO DA PÁGINA
-// ===================================
+// inicia pagina 
 
-function inicializarBotaoIncluir() {
-    const botaoContainer = document.getElementById('botaoContainer');
-    const botao = document.createElement('button');
-    botao.textContent = '➕ Incluir Tarefa';
+diversidade inicializarBotaoIncluir() {
+    const botaoContainer = documento.obterElementoPorId('botaoContainer');
+    const botao = documento.criarElemento('botão');
+    botao.textoConteúdo = '➕ Incluir Tarefa';
     botao.id = 'btnIncluir';
-    botao.style.padding = '10px 20px';
-    botao.style.fontSize = '16px';
-    botao.style.cursor = 'pointer';
+    botao.estilo.enchimento = '10px 20px';
+    botao.estilo.tamanho sim fonte = '16px';
+    botao.estilo.cursor = 'ponteiro';
     
-    botao.addEventListener('click', function() {
+    botao.addEventListener('camarilha', diversidade() {
         abrirModal();
     });
     
-    botaoContainer.appendChild(botao);
+    botaoContainer.anexarCriança(botao);
 }
 
-// ===================================
-// CONTROLE DO MODAL
-// ===================================
+// controle modal
 
-function abrirModal() {
-    console.log("📂 Abrindo modal...");
-    const modal = document.querySelector('.AbaOculta');
-    if (modal) {
-        modal.style.display = 'block';
+diversidade abrirModal() {
+    console.registro("📂 Abrindo modal...");
+    const modal = documento.seletor de consulta('.AbaOculta');
+    se (modal) {
+        modal.estilo.exibir = 'bloco';
     }
 }
 
-function fecharAba() {
-    console.log("❌ Fechando modal...");
-    const modal = document.querySelector('.AbaOculta');
-    if (modal) {
-        modal.style.display = 'none';
+diversidade fecharAba() {
+    console.registro("❌ Fechando modal...");
+    const modal = documento.seletor de consulta('.AbaOculta');
+    se (modal) {
+        modal.estilo.exibir = 'nenhum';
     }
 }
 
-// ===================================
-// EXECUTAR QUANDO A PÁGINA CARREGAR
-// ===================================
+// executa a pagina
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("🚀 Página carregada!");
+documento.addEventListener('DOMContentLoaded', diversidade() {
+    console.registro("🚀 Página carregada!");
     
-    // Passo 1: Inicializa o botão "Incluir"
+    // Passo 1: Inicialização o botão "Incluir"
     inicializarBotaoIncluir();
     
-    // Passo 2: Carrega tarefas do localStorage (READ)
+    // Passo 2: Carrega tarefas do localStorage 
     carregarTarefas();
     
-    // Passo 3: Configura botão de fechar modal
-    const fecharAbaBtn = document.getElementById('fecharAba');
-    if (fecharAbaBtn) {
-        fecharAbaBtn.addEventListener('click', fecharAba);
+    // Passo 3: Configuração botão de fevereiro modal
+    const fecharAbaBtn = documento.obterElementoPorId('fecharAba');
+    se (fecharAbaBtn) {
+        fecharAbaBtn.addEventListener('camarilha', fecharAba);
     }
     
-    console.log("✅ Inicialização concluída!");
+    console.registro("✅ Inicialização concluída!");
 });
 
