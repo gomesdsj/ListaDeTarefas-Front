@@ -76,122 +76,146 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Seções de Tarefas */
-#recebidas,
-#enviadas,
-#em_andamento {
+/* Seções de Tarefas - Padronizado */
+.secao-tarefas {
     margin: 2rem 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#recebidas h2,
-#enviadas h2,
-#em_andamento h2 {
+.secao-tarefas h2 {
     color: #2c3e50;
     margin-bottom: 1rem;
     border-bottom: 2px solid #3498db;
     padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Listas de Tarefas */
+.lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tarefas - Estilo Padronizado */
+.TarefaRecebida,
+.TarefaEnviada,
+.TarefaEmAndamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    gap: 1rem;
 }
 
 /* Tarefas Recebidas */
 .TarefaRecebida {
-    padding: 0.8rem;
-    margin: 0.5rem 0;
     background-color: #e8f4f8;
     border-left: 4px solid #3498db;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
 }
 
 .TarefaRecebida:hover {
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
     transform: translateX(5px);
 }
 
 /* Tarefas Enviadas */
 .TarefaEnviada {
-    padding: 0.8rem;
-    margin: 0.5rem 0;
     background-color: #f0f8e8;
     border-left: 4px solid #4CAF50;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
 }
 
 .TarefaEnviada:hover {
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
     transform: translateX(5px);
 }
 
 /* Tarefas em Andamento */
 .TarefaEmAndamento {
-    padding: 0.8rem;
-    margin: 0.5rem 0;
     background-color: #fff8e8;
     border-left: 4px solid #f39c12;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
 }
 
 .TarefaEmAndamento:hover {
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
     transform: translateX(5px);
 }
 
-/* Botões de Ação - Tarefas */
-#listaTarefasEnviadas .TarefaEnviada,
-#listaTarefasAndamento .TarefaEmAndamento,
-#listaTarefasRecebidas .TarefaRecebida {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#listaTarefasEnviadas .TarefaEnviada span,
-#listaTarefasAndamento .TarefaEmAndamento span,
-#listaTarefasRecebidas .TarefaRecebida span {
+/* Conteúdo das Tarefas */
+.TarefaRecebida > div,
+.TarefaEnviada > div,
+.TarefaEmAndamento > div {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 }
 
+.TarefaRecebida span,
+.TarefaEnviada span,
+.TarefaEmAndamento span {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.TarefaRecebida small,
+.TarefaEnviada small,
+.TarefaEmAndamento small {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+/* Botões de Ação - Tarefas */
 .botoes-acao {
     display: flex;
-    gap: 5px;
+    gap: 0.5rem;
+}
+
+/* Botões de Ação - Tarefas */
+.botoes-acao {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .botoes-acao button {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
     cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    border-radius: 3px;
-    transition: 0.2s;
-}
-
-.botoes-acao button:hover {
-    background-color: #e0e0e0;
-}
-
-.btn-deletar {
-    background-color: #ffcccc !important;
-}
-
-.btn-deletar:hover {
-    background-color: #ff9999 !important;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-weight: 500;
 }
 
 .btn-editar,
 .btn-atualizar {
-    background-color: #ccffcc !important;
+    background-color: #3498db;
+    color: white;
 }
 
 .btn-editar:hover,
 .btn-atualizar:hover {
-    background-color: #99ff99 !important;
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-deletar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-deletar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
 /* AbaOculta - Modal */
